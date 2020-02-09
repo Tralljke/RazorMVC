@@ -29,7 +29,21 @@ namespace Razor.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View(myProduct2);
+            return View(myProduct);
+        }
+        public ActionResult NameAndPrice()
+        {
+            return View(myProduct);
+        }
+        public ActionResult DemoExpression()
+        {
+
+            ViewBag.ProductCount = 1;
+            ViewBag.ExpressShip = true;
+            ViewBag.ApplyDiscount = false;
+            ViewBag.Supplier = null;
+
+            return View(myProduct);
         }
     }
 }
